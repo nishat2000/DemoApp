@@ -1,0 +1,16 @@
+{
+  "name": "typescript_1",
+  "version": "1.0.0",
+  "description": "practice session",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "node ./dist/components/absract_ex.js"
+  },
+  "author": "Nishat",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.7.0"
+  }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <script src="login.js"></script>
+    <style>
+        body {
+            background-color:#f5a9ca ;
+        }
+
+        .button {
+            background: rgb(74, 179, 198);
+            border: none;
+            border-radius: 3px;
+            
+            font: 20px bold;
+            margin-left: 70px;
+            width: 200px;
+        }
+
+        .button:hover {
+            opacity: 0.7;
+        }
+
+        table,
+        td {
+            border: 1px solid black;
+            text-align: center;
+
+        }
+
+        
+
+        h2 {
+            text-align: center;
+        }
+
+        #register {
+            position: absolute;
+            width: 30%;
+            padding: 0px 6% 10px 6%;
+            margin: 0px 50% 50px 100px;
+            background: rgb(255, 255, 255);
+            border: 1px solid black;
+            box-shadow: 5px 20px 20px rgb(139, 139, 139);
+            border-radius: 5px;
+            outline: 4px solid black;
+        }
+        #login {
+            width: 30%;
+            padding: 0px 6% 10px 6%;
+            margin: 50px 20% 50px 55%;
+            background: rgb(255, 255, 255);
+            border: 1px solid rgba(117, 224, 238, 0.8);
+            box-shadow: 5px 20px 20px rgb(139, 139, 139);
+            border-radius: 5px;
+            outline: 4px solid black;
+        }
+        .table{
+            margin: 5% 100px 50px 28%;
+            width: 30%;
+            padding: 30px 6% ;
+            background: rgb(255, 255, 255);
+            border: 1px solid rgba(117, 224, 238, 0.8);
+            box-shadow: 5px 20px 20px rgb(139, 139, 139);
+            border-radius: 5px;
+            outline: 4px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="register">
+        <h2>Register</h2>
+        <div>
+            <label>Name: </label>
+            <input style=" margin-left: 22px;" type="text" id="name" name="" required onblur="check_name()" onfocus="this.value=''">
+            <span id="cname" style="color: red"></span>
+        </div><br>
+        <div>
+            <label>Email: </label>
+            <input style=" margin-left: 22px;" type="email" id="email" name="" required onblur="check_email()" onfocus="this.value=''">
+            <span id="cemail" style="color: red"></span>
+        </div><br>
+        <div>
+            <label>Course: </label>
+            <input style=" margin-left: 15px;" type="text" id="course" name="" required onblur="check_course()"onfocus="this.value=''">
+            <span id="ccourse" style="color: red"></span>
+        </div><br>
+        <div>
+            <label>Password: </label>
+            <input type="password" id="pwd" name="c_course" required onblur="check_pwd()"onfocus="this.value=''">
+            <span id="cpwd" style="color: red"></span>
+        </div><br>
+        <input class="button" type="button" value="Submit" onclick="register()">
+        <span id="empty" style="color: red"></span>
+        <br><br>
+    </section>
+
+    <section id="login">
+        <h2>Login</h2>
+        
+        <div>
+            <label>Email: </label>
+            <input style=" margin-left: 23px;" type="email" id="lemail" name="c_roll" required onfocus="this.value=''">
+            <span id="" style="color: red"></span>
+        </div><br>
+        <div>
+            <label>Password: </label>
+            <input style=" margin-left: 1px;" type="password" id="lpwd" name="c_course" required onfocus="this.value=''">
+            <span id="ccourse" style="color: red"></span>
+        </div><br>
+            <div>
+                <button class="button" onclick="login()">Login</button>
+                <br>
+                <span id="loginResult" style="color: green"></span>
+
+            </div><br><br><br><br><br>
+    </section>
+    <section class="table" id="tab" hidden>
+        <table>
+            <thead>
+                <td>Name</td>
+                <td>Email ID</td>
+                <td>Course name</td>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
+    </section>
+
+</body>
+
+</html>
