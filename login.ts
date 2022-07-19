@@ -89,7 +89,7 @@ function login() {
 
     const arr = Data.find(userobj => (userobj.email === LEmail && userobj.password === LPassword));
     if (arr == undefined) {
-        alert('Invalid username & password!');
+        alert('Invalid username & password! Please try with correct credentials');
     }
     else {
         alert('Successfully Login!');
